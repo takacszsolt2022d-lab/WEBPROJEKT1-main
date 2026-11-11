@@ -1,0 +1,24 @@
+my-express-project/ 
+├── src/
+│   ├── config/          # Konfigurációs fájlok (adatbázis kapcsolat, környezeti változók)
+│   │   └── db.js
+│   ├── controllers/     # Vezérlők (üzleti logika kezelése, kérés/válasz feldolgozás)
+│   │   └── user.controller.js
+│   ├── models/          # Adatbázis modellek / adatelérési réteg (pl. Sequelize, Mongoose vagy mysql2)
+│   │   └── user.model.js
+│   ├── routes/          # Útvonalválasztók (endpointok definíciója)
+│   │   └── user.routes.js
+│   ├── middlewares/     # Egyedi middleware-ek (hitelesítés, hibakezelés, validáció)
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│   ├── services/        # Opcionális: Üzleti logika kiszervezése (komplexebb folyamatokhoz)
+│   │   └── user.service.js
+│   ├── utils/           # Segédfüggvények, konstansok
+│   │   └── logger.js
+│   ├── app.js           # Express alkalmazás példányosítása és middleware-ek bekötése
+│   └── server.js        # Szerver elindítása (PORT figyelése, DB kapcsolat indítás)
+├── .env                 # Környezeti változók (titkos)
+├── .env.example         # Példa környezeti változók fájl (git-be kerül)
+├── .gitignore
+├── package.json
+└── README.md
