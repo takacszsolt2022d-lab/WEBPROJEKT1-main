@@ -112,7 +112,7 @@ export default function OrderForm() {
             <section className="order-card" aria-labelledby="order-title">
                 <header className="order-header">
                     <p className="order-eyebrow">Webshop megrendelés</p>
-                    <h1 id="order-title">Megrendelés véglegesítése</h1>
+                    <h2 id="order-title">Megrendelés véglegesítése</h2>
                     <ol className="order-progress" aria-label="Űrlap lépései">
                         {["Személyes adatok", "Szállítás", "Összegzés"].map((label, index) => {
                             const stepNumber = index + 1;
