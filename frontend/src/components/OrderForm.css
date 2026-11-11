@@ -1,276 +1,280 @@
+h2 {
+    text-align: center;
+}
+
 .order-page {
-  min-height: calc(100vh - 150px);
-  padding: 48px 20px;
-  background: #f3f6f8;
-  color: #1d2935;
+    min-height: calc(100vh - 150px);
+    padding: 48px 20px;
+    background: #f3f6f8;
+    color: #1d2935;
 }
 
 .order-card {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 36px;
-  border: 1px solid #e0e7eb;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 12px 36px rgb(27 55 74 / 8%);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 36px;
+    border: 1px solid #e0e7eb;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 12px 36px rgb(27 55 74 / 8%);
 }
 
 .order-header {
-  margin-bottom: 32px;
-  text-align: center;
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 .order-eyebrow {
-  margin: 0 0 8px;
-  color: #098d97;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+    margin: 0 0 8px;
+    color: #098d97;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
 }
 
 .order-header h1 {
-  margin: 0;
-  font-size: clamp(1.6rem, 4vw, 2rem);
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 2rem);
 }
 
 .order-progress {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 32px 0 0;
-  padding: 0;
-  list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 32px 0 0;
+    padding: 0;
+    list-style: none;
 }
 
 .order-progress-step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 9px;
-  color: #7d8992;
-  font-size: 0.85rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    color: #7d8992;
+    font-size: 0.85rem;
 }
 
 .order-progress-step:not(:last-child)::after {
-  position: absolute;
-  top: 17px;
-  left: calc(50% + 21px);
-  width: calc(100% - 42px);
-  height: 2px;
-  background: #dce4e8;
-  content: '';
+    position: absolute;
+    top: 17px;
+    left: calc(50% + 21px);
+    width: calc(100% - 42px);
+    height: 2px;
+    background: #dce4e8;
+    content: "";
 }
 
 .order-progress-step.complete:not(:last-child)::after {
-  background: #098d97;
+    background: #098d97;
 }
 
 .order-progress-number {
-  z-index: 1;
-  display: grid;
-  width: 36px;
-  height: 36px;
-  place-items: center;
-  border: 2px solid #dce4e8;
-  border-radius: 50%;
-  background: #fff;
-  font-weight: 700;
+    z-index: 1;
+    display: grid;
+    width: 36px;
+    height: 36px;
+    place-items: center;
+    border: 2px solid #dce4e8;
+    border-radius: 50%;
+    background: #fff;
+    font-weight: 700;
 }
 
 .order-progress-step.active,
 .order-progress-step.complete {
-  color: #087b84;
+    color: #087b84;
 }
 
 .order-progress-step.active .order-progress-number,
 .order-progress-step.complete .order-progress-number {
-  border-color: #098d97;
-  background: #098d97;
-  color: #fff;
+    border-color: #098d97;
+    background: #098d97;
+    color: #fff;
 }
 
 .order-step h2 {
-  margin: 0 0 24px;
-  font-size: 1.35rem;
+    margin: 0 0 24px;
+    font-size: 1.35rem;
 }
 
 .order-field {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 18px;
 }
 
 .order-field label,
 .order-payment legend {
-  font-size: 0.95rem;
-  font-weight: 650;
+    font-size: 0.95rem;
+    font-weight: 650;
 }
 
 .order-field input {
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 46px;
-  padding: 10px 12px;
-  border: 1px solid #cbd6dc;
-  border-radius: 7px;
-  background: #fff;
-  color: inherit;
-  font: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 12px;
+    border: 1px solid #cbd6dc;
+    border-radius: 7px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
 }
 
 .order-field input:focus {
-  border-color: #098d97;
-  outline: 3px solid rgb(9 141 151 / 15%);
+    border-color: #098d97;
+    outline: 3px solid rgb(9 141 151 / 15%);
 }
 
-.order-field input[aria-invalid='true'] {
-  border-color: #c62828;
+.order-field input[aria-invalid="true"] {
+    border-color: #c62828;
 }
 
 .order-field-error {
-  color: #b42318;
-  font-size: 0.875rem;
+    color: #b42318;
+    font-size: 0.875rem;
 }
 
 .order-payment {
-  display: grid;
-  gap: 12px;
-  margin: 0 0 26px;
-  padding: 0;
-  border: 0;
+    display: grid;
+    gap: 12px;
+    margin: 0 0 26px;
+    padding: 0;
+    border: 0;
 }
 
 .order-payment legend {
-  margin-bottom: 13px;
+    margin-bottom: 13px;
 }
 
 .order-radio-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: fit-content;
-  cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .order-radio-option input {
-  width: 18px;
-  height: 18px;
-  accent-color: #098d97;
+    width: 18px;
+    height: 18px;
+    accent-color: #098d97;
 }
 
 .order-summary {
-  padding: 20px;
-  border: 1px solid #dce8eb;
-  border-radius: 10px;
-  background: #f6fafb;
+    padding: 20px;
+    border: 1px solid #dce8eb;
+    border-radius: 10px;
+    background: #f6fafb;
 }
 
 .order-summary h3 {
-  margin: 0 0 14px;
-  font-size: 1.05rem;
+    margin: 0 0 14px;
+    font-size: 1.05rem;
 }
 
 .order-summary dl {
-  display: grid;
-  gap: 10px;
-  margin: 0;
+    display: grid;
+    gap: 10px;
+    margin: 0;
 }
 
 .order-summary dl > div {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .order-summary dt {
-  color: #596873;
+    color: #596873;
 }
 
 .order-summary dd {
-  margin: 0;
-  text-align: right;
-  overflow-wrap: anywhere;
+    margin: 0;
+    text-align: right;
+    overflow-wrap: anywhere;
 }
 
 .order-actions {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 28px;
 }
 
 .order-button {
-  min-height: 44px;
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 7px;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .order-button:focus-visible {
-  outline: 3px solid rgb(9 141 151 / 35%);
-  outline-offset: 2px;
+    outline: 3px solid rgb(9 141 151 / 35%);
+    outline-offset: 2px;
 }
 
 .order-button-primary {
-  margin-left: auto;
-  background: #098d97;
-  color: #fff;
+    margin-left: auto;
+    background: green;
+    color: #fff;
 }
 
 .order-button-primary:hover:not(:disabled) {
-  background: #077780;
+    background: #077780;
 }
 
 .order-button-primary:disabled {
-  cursor: wait;
-  opacity: 0.7;
+    cursor: wait;
+    opacity: 0.7;
 }
 
 .order-button-secondary {
-  border: 1px solid #cbd6dc;
-  background: #fff;
-  color: #263640;
+    border: 1px solid #cbd6dc;
+    background: light green;
+    color: white;
 }
 
 .order-message {
-  margin: 18px 0 0;
-  font-weight: 650;
-  text-align: center;
+    margin: 18px 0 0;
+    font-weight: 650;
+    text-align: center;
 }
 
 .order-message.success {
-  color: #187347;
+    color: #187347;
 }
 
 .order-message.error {
-  color: #b42318;
+    color: #b42318;
 }
 
 @media (max-width: 560px) {
-  .order-page {
-    padding: 24px 12px;
-  }
+    .order-page {
+        padding: 24px 12px;
+    }
 
-  .order-card {
-    padding: 24px 18px;
-  }
+    .order-card {
+        padding: 24px 18px;
+    }
 
-  .order-progress-label {
-    font-size: 0.72rem;
-    text-align: center;
-  }
+    .order-progress-label {
+        font-size: 0.72rem;
+        text-align: center;
+    }
 
-  .order-summary dl > div {
-    flex-direction: column;
-    gap: 2px;
-  }
+    .order-summary dl > div {
+        flex-direction: column;
+        gap: 2px;
+    }
 
-  .order-summary dd {
-    text-align: left;
-  }
+    .order-summary dd {
+        text-align: left;
+    }
 }
