@@ -9,6 +9,7 @@ const initialFormData = {
     postalCode: "",
     city: "",
     street: "",
+    phone2: "",
     paymentMethod: "",
 };
 
@@ -36,6 +37,9 @@ function validateStep(step, formData) {
         }
         if (formData.street.trim().length < 6) {
             errors.street = "Az utca és házszám legalább 6 karakter legyen.";
+        }
+        if (formData.phone2.trim().length < 9) {
+            errors.phone2 = "A második telefonszám legalább 9 karakter hosszú legyen.";
         }
     }
 
@@ -137,7 +141,7 @@ export default function OrderForm() {
                     {step === 1 && (
                         <section className="order-step" aria-labelledby="step-title">
                             <h2 id="step-title">1.Lépés:Személyes adatok</h2>
-                            {renderField("name", "Név", { type: "text", autoComplete: "name" })}
+                            {renderField("name", "Teljes név", { type: "text", autoComplete: "name" })}
                             {renderField("email", "E-mail cím", { type: "email", autoComplete: "email" })}
                             {renderField("phone", "Telefonszám", { type: "tel", autoComplete: "tel" })}
                         </section>
@@ -149,6 +153,7 @@ export default function OrderForm() {
                             {renderField("postalCode", "Irányítószám", { type: "text", inputMode: "numeric", autoComplete: "postal-code", maxLength: 4 })}
                             {renderField("city", "Város", { type: "text", autoComplete: "address-level2" })}
                             {renderField("street", "Utca, házszám", { type: "text", autoComplete: "street-address" })}
+                            {renderField("phone2", "Második telefonszám", { type: "tel" })}
                         </section>
                     )}
 
@@ -156,7 +161,7 @@ export default function OrderForm() {
                         <section className="order-step" aria-labelledby="step-title">
                             <h2 id="step-title">3.Lépés: Fizetés és összegzés</h2>
                             <fieldset className="order-payment">
-                                <legend>Fizetési mód</legend>
+                                <legend>Fizetési mód Kiválasztása:</legend>
                                 {paymentMethods.map((method) => (
                                     <label className="order-radio-option" key={method}>
                                         <input type="radio" name="paymentMethod" value={method} checked={formData.paymentMethod === method} onChange={handleChange} aria-invalid={Boolean(errors.paymentMethod)} aria-describedby={errors.paymentMethod ? "paymentMethod-error" : undefined} />
@@ -184,6 +189,10 @@ export default function OrderForm() {
                                     <div>
                                         <dt>Telefonszám</dt>
                                         <dd>{formData.phone}</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Második telefonszám</dt>
+                                        <dd>{formData.phone2}</dd>
                                     </div>
                                     <div>
                                         <dt>Szállítási cím</dt>
